@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Accesibilidad</title>
+    <style>
+        .product {
+            display: inline-block;
+            width: 30%;
+            vertical-align: top;
+            margin-right: 2%;
+        }
+        .product-description {
+            display: none;
+        }
+        @media (max-width: 900px) {
+            .product {
+                display: block;
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+                    <section>
+            <article class="product">
+            <img src="https://m.media-amazon.com/images/I/91BTDEbDxbL._AC_SL1500_.jpg" alt="Horizon Forbidden West para ps5" height="300px" width="auto">
+                <details>
+                    <summary>
+                        <button onclick="document.getElementById('desc1').style.display='block'">Más</button>
+                    </summary>
+                <p id="desc1" class="product-description">Horizon Forbidden West para ps5</p>
+                </details>
+            </article>
+
+            <article class="product">
+                <img src="https://m.media-amazon.com/images/I/81zlBoheYhL._AC_SL1500_.jpg" alt="The Legend of Zelda: Tears of the Kingdom para Nintendo Switch" height="300px" width="auto">
+                <details>
+                    <summary>
+                        <button onclick="document.getElementById('desc2').style.display='block'">Más</button>
+                    </summary>
+                <p id="desc2" class="product-description">The Legend of Zelda: Tears of the Kingdom para Nintendo Switch</p>
+                </details>
+            </article>
+
+            <article class="product">
+                <img src="https://m.media-amazon.com/images/I/811m+JsGAzL._AC_SL1500_.jpg" alt="Hogwarts Legacy PS5"  height="300px" width="auto">
+                <details>
+                    <summary>
+                        <button onclick="document.getElementById('desc3').style.display='block'">Más</button>
+                    </summary>
+                <p id="desc3" class="product-description">Hogwarts Legacy para PS5</p>
+                </details>
+            </article>
+        </section>
+
+        <section>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Registrarse</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Comentarios</h2>
+            <article>
+                <h3>Usuario 1</h3>
+                <p>Comentario sobre el producto 1</p>
+            </article>
+            <article>
+                <h3>Usuario 2</h3>
+                <p>Comentario sobre el producto 2</p>
+            </article
+        <article>
+            <h3>Usuario 3</h3>
+            <p>Comentario sobre el producto 3</p>
+        </article>
+        <article>
+            <h3>Usuario 4</h3>
+            <p>Comentario sobre el producto 1</p>
+        </article>
+        <article>
+            <h3>Usuario 5</h3>
+            <p>Comentario sobre el producto 2</p>
+        </article>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2023 Ejemplo de Accesibilidad. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+    function showDescription(id) {
+        var desc = document.getElementById(id);
+        if (desc.style.display === "block") {
+            desc.style.display = "none";
+        } else {
+            desc.style.display = "block";
+        }
+    }
+</script>
+</body>
+</html>
